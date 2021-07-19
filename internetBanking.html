@@ -31,6 +31,41 @@
         </div>
       </div>
     </nav>
-    <h1><center>Welcome To Gringotts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></h1><br>
+   <center>
+    <form method="POST" style="margin-top: 10vh;width: 40vw;min-width: 400px;padding: 40px;padding-top: 20px; border-radius: 30px;" class="bg-light">
+      <h3>Pay To</h3>
+      <br>
+    <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Account Id</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Account Id">
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Account Holder's Nmae">
+    </div>
+    <label for="Ammount" class="form-label">Ammount</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text"><i class="fa fa-rupee-sign"></i></span>
+      <input type="text" class="form-control" id="Ammount" aria-label="Amount (to the nearest dollar)" placeholder="0.00">
+      <span class="input-group-text">/-</span>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Reason <br>(optional)</span>
+      <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+      <div class="col-sm-7 input-group">
+        <input type="password" maxlength="6" minlength="6" class="form-control" id="inputPassword3" required>
+        <span class="input-group-text">
+        <i class="far fa-eye" id="togglePassword" onclick="toggle()" style="cursor: pointer;"></i>
+        </span>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success">Pay</button>
+    </form>
+  </center>
+  </body>
+</html>
   </body>
 </html>
