@@ -1,0 +1,22 @@
+<?php
+session_start();
+$username=$_POST['id'];
+$password=$_POST['password'];
+$con=mysqli_connect('localhost','root','root');
+mysqli_select_db($con,'bank');
+$q="select *from users where (acc_no='$username' OR username='$username') and password='$password';";
+$result=mysqli_query($con,$q);
+$row=mysqli_fetch_array($result);
+$num=mysqli_num_rows($result);
+if($num==1)
+{
+	$_SESSION['username']=$row[USERNAME];
+	$_SESSION['account_id']=$row[ACC_NO];
+	header('location:http://localhost/Banking-System/internetBanking.php');
+}
+else
+{
+	header('location:http://localhost/Banking-System/login.php');
+}
+mysqli_close($con);
+?>
